@@ -29,7 +29,7 @@ const NotificationBell = () => {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute right-0 mt-2 w-64 bg-gray-900 border rounded-lg shadow-lg z-50">
+        <div className="absolute right-0 mt-2 w-48 bg-gray-900 border rounded-lg shadow-lg z-50">
           <div className="px-4 py-2 font-semibold border-b">
             Notifications
           </div>

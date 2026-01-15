@@ -1,22 +1,29 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
+import { useUIStore } from "../store/uiStore";
 
 const MainLayout = () => {
+  const { sidebarCollapsed } = useUIStore();
+
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-hidden">
       <Sidebar />
+      <Navbar />
 
-      <div className="ml-64 flex flex-col h-screen">
-        <Navbar />
-
-        <main className="flex-1 overflow-y-auto bg-gray-100 p-4">
+      {/* Content */}
+      <div
+        className={`
+          pt-16 transition-all
+          ${sidebarCollapsed ? "md:ml-16" : "md:ml-64"}
+        `}
+      >
+        <main className="h-[calc(100vh-4rem)] overflow-y-auto bg-gray-100 p-4">
           <Outlet />
         </main>
       </div>
     </div>
   );
 };
-
 
 export default MainLayout;

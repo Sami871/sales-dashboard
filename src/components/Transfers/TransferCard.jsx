@@ -9,7 +9,7 @@ const TransferCard = ({
   return (
     <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-xl p-4 w-60 shadow-sm">
       
-      <div className={`w-10 h-10 flex items-center justify-center rounded-full ${iconBg}`}>
+      <div className={`w-12 h-12 flex items-center justify-center rounded ${iconBg}`}>
         <Icon className={iconColor} size={20} />
       </div>
 
