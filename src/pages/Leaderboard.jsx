@@ -1,7 +1,10 @@
+import LeaderboardPage from "../components/Leaderboard/Leader"
 
 const Leaderboard = () => {
   return (
-    <div>Leaderboard</div>
+    <div className="p-0">
+      <LeaderboardPage />
+    </div>
   )
 }
 

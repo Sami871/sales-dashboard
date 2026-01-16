@@ -18,7 +18,7 @@ const MainLayout = () => {
           ${sidebarCollapsed ? "md:ml-16" : "md:ml-64"}
         `}
       >
-        <main className="h-[calc(100vh-4rem)] overflow-y-auto bg-gray-100 p-4">
+        <main className="h-[calc(100vh-4rem)] overflow-y-auto bg-gray-100 ">
           <Outlet />
         </main>
       </div>
